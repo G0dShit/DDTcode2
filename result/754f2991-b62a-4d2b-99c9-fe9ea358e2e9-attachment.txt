@@ -1,0 +1,7 @@
+============================
+用例名称: 登录1
+请求参数为:loginAcct=yangjie&loginPwd=enhjYzEwMA==
+忽略校验字段为:origin,url
+实际响应数据为:{"args":{"loginAcct":"yangjie","loginPwd":"enhjYzEwMA=="},"headers":{"Accept":"*/*","Accept-Encoding":"gzip,deflate","Content-Type":"application/x-www-form-urlencoded","Host":"www.httpbin.org","User-Agent":"python-requests/2.18.1"},"origin":"183.67.16.40,183.67.16.40","url":"https://www.httpbin.org/get?loginAcct=yangjie&loginPwd=enhjYzEwMA=="}
+接口断言与期望不符,执行失败
+预期响应结果为:{"args":{"loginAcct":"yangjie","loginPwd":"enhjYzEwMA=="},"headers":{"Accept":"*/*","Accept-Encoding":"gzip,deflate","Content-Type":"application/x-www-form-urlencoded","Host":"www.httpbin.org","User-Agent":"python-requests/2.18.4"},"origin":"119.86.144.135,119.86.144.135","url":"https://www.httpbin.org/get?loginAcct=yangjie&loginPwd=enhjYzEwMA=="}

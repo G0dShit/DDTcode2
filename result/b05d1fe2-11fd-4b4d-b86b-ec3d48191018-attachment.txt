@@ -1,0 +1,6 @@
+============================
+用例名称: 登录5
+请求参数为:loginAcct=yangjie&loginPwd=enhjYzEwMA==5
+无忽略校验字段
+接口断言通过
+不进入SQL判断

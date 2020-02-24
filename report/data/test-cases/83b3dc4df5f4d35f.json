@@ -1,0 +1,110 @@
+{
+  "uid" : "83b3dc4df5f4d35f",
+  "name" : "test_one_case_1",
+  "fullName" : "execute_cases.excute_cases#test_one_case_1",
+  "historyId" : "fd2676e3dc2d9fecff8d28221fad8a52",
+  "time" : {
+    "start" : 1553081339347,
+    "stop" : 1553081339877,
+    "duration" : 530
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup",
+    "time" : {
+      "start" : 1553081339347,
+      "stop" : 1553081339347,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "a549396ce99d92d",
+      "name" : "log",
+      "source" : "a549396ce99d92d.txt",
+      "type" : "text/plain",
+      "size" : 0
+    }, {
+      "uid" : "be00733d515a41d3",
+      "name" : "stdout",
+      "source" : "be00733d515a41d3.txt",
+      "type" : "text/plain",
+      "size" : 168
+    }, {
+      "uid" : "8bd6d6d61cc0a5ff",
+      "name" : "stderr",
+      "source" : "8bd6d6d61cc0a5ff.txt",
+      "type" : "text/plain",
+      "size" : 0
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup::0",
+    "time" : {
+      "start" : 1553081340922,
+      "stop" : 1553081340922,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "execute_cases"
+  }, {
+    "name" : "subSuite",
+    "value" : "excute_cases"
+  }, {
+    "name" : "host",
+    "value" : "USER-NF5TMHEKHE"
+  }, {
+    "name" : "thread",
+    "value" : "17544-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "execute_cases"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "83b3dc4df5f4d35f.json",
+  "parameterValues" : [ ]
+}

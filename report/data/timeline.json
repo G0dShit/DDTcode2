@@ -1,0 +1,85 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "USER-NF5TMHEKHE",
+    "children" : [ {
+      "name" : "17544-MainThread",
+      "children" : [ {
+        "name" : "test_one_case_1",
+        "uid" : "83b3dc4df5f4d35f",
+        "parentUid" : "33374ec44715978531e610983c955036",
+        "status" : "passed",
+        "time" : {
+          "start" : 1553081339347,
+          "stop" : 1553081339877,
+          "duration" : 530
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_one_case_5",
+        "uid" : "cdb106f49844ff01",
+        "parentUid" : "33374ec44715978531e610983c955036",
+        "status" : "failed",
+        "time" : {
+          "start" : 1553081339908,
+          "stop" : 1553081340548,
+          "duration" : 640
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "33374ec44715978531e610983c955036"
+    }, {
+      "name" : "14968-MainThread",
+      "children" : [ {
+        "name" : "test_one_case_2",
+        "uid" : "7b9efdb4c7890de7",
+        "parentUid" : "4b36368219462d0361342d53f0f8164b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1553081339362,
+          "stop" : 1553081339971,
+          "duration" : 609
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "4b36368219462d0361342d53f0f8164b"
+    }, {
+      "name" : "16932-MainThread",
+      "children" : [ {
+        "name" : "test_one_case_3",
+        "uid" : "c1847f458ec834fa",
+        "parentUid" : "cdc4366c21cf313c75d5941acbbefea3",
+        "status" : "failed",
+        "time" : {
+          "start" : 1553081339347,
+          "stop" : 1553081339939,
+          "duration" : 592
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "cdc4366c21cf313c75d5941acbbefea3"
+    }, {
+      "name" : "12720-MainThread",
+      "children" : [ {
+        "name" : "test_one_case_4",
+        "uid" : "cc3cf912c4e564ce",
+        "parentUid" : "baf80b4f52ebf4ce2bd422cccd8fca8e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1553081339347,
+          "stop" : 1553081339955,
+          "duration" : 608
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "baf80b4f52ebf4ce2bd422cccd8fca8e"
+    } ],
+    "uid" : "f146751a7faac05f82fea17a691bdde1"
+  } ]
+}

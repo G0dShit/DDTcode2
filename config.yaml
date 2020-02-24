@@ -1,0 +1,25 @@
+Environments:
+    env:
+        test
+    test:
+        url: http://www.httpbin.org
+        name: Developer
+        excelpath: test_data\\case.xlsx
+        database : {'host':'127.0.0.1','port':3306,'user':'root','password':'123456','dbname':'milor'}
+    prod:
+        url: https://www.httpbin.org
+        name: prod
+        excelpath: test_data\\case.xlsx
+        database : {'host':'127.0.0.1','port':3306,'user':'root','password':'123456','dbname':'milor'}
+Run_all:
+    Whether : false
+Moudle:
+    #配置行号需要+1跳过表头
+    casesuite01:
+        sheetname : case02
+        start : 4
+        end : 6
+    casesuite02:
+        sheetname : case01
+        start : 2
+        end : 3

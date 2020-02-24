@@ -1,0 +1,118 @@
+{
+  "uid" : "cdb106f49844ff01",
+  "name" : "test_one_case_5",
+  "fullName" : "execute_cases.excute_cases#test_one_case_5",
+  "historyId" : "1e52c81ee1c316bf3d3e5a957448eb2d",
+  "time" : {
+    "start" : 1553081339908,
+    "stop" : 1553081340548,
+    "duration" : 640
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError",
+  "statusTrace" : "self = <execute_cases.excute_cases testMethod=test_one_case_5>\ndata = {'SQL语句': '', 'SQL预期结果': '', '入参': 'loginAcct=yangjie&loginPwd=enhjYzEwMA==', '忽略字段检查': 'origin,url', ...}\n\n    @ddt.data(*testData)\n    def test_one_case(self,data):\n        result = conf.get_config()\n        url = result['Environments']['test']['url']\n        #发起请求获取实际响应结果\n        res=requestsaction.excute_case(url, data)\n        #进行数据校验\n>       checkdataaction.checkdata(data, res)\n\nexecute_cases.py:23: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\ndata = {'SQL语句': '', 'SQL预期结果': '', '入参': 'loginAcct=yangjie&loginPwd=enhjYzEwMA==', '忽略字段检查': 'origin,url', ...}\nres = <Response [200]>\n\n    @staticmethod\n    def checkdata(data, res):\n        descontentreplace = data['预期结果'].replace(\"\\n\", \"\").replace(\" \", \"\").replace(\"\\t\", \"\").replace(\"\\r\", \"\").encode(\n            \"utf-8\")  # 预期结果\n        ignorefields = data['忽略字段检查']  # 忽略字段\n        print(u'请求参数为:' + str(data['入参']))\n        resd = res.content.decode(\"utf-8\")  # 实际响应结果\n        if res.status_code != 200:\n            print(u\"请求失败,statuscode非200，实际响应code为 \" + str(res.status_code))\n            raise AssertionError\n        #去掉实际响应结果特殊符号\n        resreplace = resd.replace(\" \", \"\").replace(\"\\n\", \"\").replace(\"\\t\", \"\").replace(\"\\r\", \"\").encode(\"utf-8\")\n        ignorefieldsl = ignorefields.split(',')\n        if ignorefields:\n            try:\n                dictdescontent = json.loads(descontentreplace)\n                for i in range(len(ignorefieldsl)):\n                    dictdescontent.pop(ignorefieldsl[i])\n                descontent = json.dumps(dictdescontent, ensure_ascii=False)\n            except:\n                print(u'预期结果非json格式或预期结果中不包含忽略字段')\n                raise RuntimeError\n            print(u'忽略校验字段为:' + str(ignorefields))\n            resreplacel = json.loads(resreplace)\n            for i in range(len(ignorefieldsl)):\n                if ignorefieldsl[i] not in json.loads(res.text):  # 判断忽略字段是否被包含\n                    print(u\"返回内容中无忽略字段,实际返回为\" + res.text)\n                    raise RuntimeError\n                else:\n                    resreplacel.pop(ignorefieldsl[i])\n            resreplace2 = json.dumps(resreplacel, ensure_ascii=False)\n        else:\n            print(u'无忽略校验字段')\n            descontent = descontentreplace\n            resreplace2 = resreplace\n        if descontent in resreplace2:\n            print(u\"接口断言通过\")\n        else:\n            print(u\"实际响应数据为:\" + resreplace.decode())\n            print(u\"接口断言与期望不符,执行失败\")\n            print(u\"预期响应结果为:\" + descontentreplace.decode())\n>           raise AssertionError\nE           AssertionError\n\ncommon\\checkdataaction.py:46: AssertionError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup",
+    "time" : {
+      "start" : 1553081339347,
+      "stop" : 1553081339347,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError",
+    "statusTrace" : "self = <execute_cases.excute_cases testMethod=test_one_case_5>\ndata = {'SQL语句': '', 'SQL预期结果': '', '入参': 'loginAcct=yangjie&loginPwd=enhjYzEwMA==', '忽略字段检查': 'origin,url', ...}\n\n    @ddt.data(*testData)\n    def test_one_case(self,data):\n        result = conf.get_config()\n        url = result['Environments']['test']['url']\n        #发起请求获取实际响应结果\n        res=requestsaction.excute_case(url, data)\n        #进行数据校验\n>       checkdataaction.checkdata(data, res)\n\nexecute_cases.py:23: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\ndata = {'SQL语句': '', 'SQL预期结果': '', '入参': 'loginAcct=yangjie&loginPwd=enhjYzEwMA==', '忽略字段检查': 'origin,url', ...}\nres = <Response [200]>\n\n    @staticmethod\n    def checkdata(data, res):\n        descontentreplace = data['预期结果'].replace(\"\\n\", \"\").replace(\" \", \"\").replace(\"\\t\", \"\").replace(\"\\r\", \"\").encode(\n            \"utf-8\")  # 预期结果\n        ignorefields = data['忽略字段检查']  # 忽略字段\n        print(u'请求参数为:' + str(data['入参']))\n        resd = res.content.decode(\"utf-8\")  # 实际响应结果\n        if res.status_code != 200:\n            print(u\"请求失败,statuscode非200，实际响应code为 \" + str(res.status_code))\n            raise AssertionError\n        #去掉实际响应结果特殊符号\n        resreplace = resd.replace(\" \", \"\").replace(\"\\n\", \"\").replace(\"\\t\", \"\").replace(\"\\r\", \"\").encode(\"utf-8\")\n        ignorefieldsl = ignorefields.split(',')\n        if ignorefields:\n            try:\n                dictdescontent = json.loads(descontentreplace)\n                for i in range(len(ignorefieldsl)):\n                    dictdescontent.pop(ignorefieldsl[i])\n                descontent = json.dumps(dictdescontent, ensure_ascii=False)\n            except:\n                print(u'预期结果非json格式或预期结果中不包含忽略字段')\n                raise RuntimeError\n            print(u'忽略校验字段为:' + str(ignorefields))\n            resreplacel = json.loads(resreplace)\n            for i in range(len(ignorefieldsl)):\n                if ignorefieldsl[i] not in json.loads(res.text):  # 判断忽略字段是否被包含\n                    print(u\"返回内容中无忽略字段,实际返回为\" + res.text)\n                    raise RuntimeError\n                else:\n                    resreplacel.pop(ignorefieldsl[i])\n            resreplace2 = json.dumps(resreplacel, ensure_ascii=False)\n        else:\n            print(u'无忽略校验字段')\n            descontent = descontentreplace\n            resreplace2 = resreplace\n        if descontent in resreplace2:\n            print(u\"接口断言通过\")\n        else:\n            print(u\"实际响应数据为:\" + resreplace.decode())\n            print(u\"接口断言与期望不符,执行失败\")\n            print(u\"预期响应结果为:\" + descontentreplace.decode())\n>           raise AssertionError\nE           AssertionError\n\ncommon\\checkdataaction.py:46: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "bd52d6a08392d2af",
+      "name" : "log",
+      "source" : "bd52d6a08392d2af.txt",
+      "type" : "text/plain",
+      "size" : 0
+    }, {
+      "uid" : "1203d2feef66233",
+      "name" : "stdout",
+      "source" : "1203d2feef66233.txt",
+      "type" : "text/plain",
+      "size" : 921
+    }, {
+      "uid" : "3729ae28801ea737",
+      "name" : "stderr",
+      "source" : "3729ae28801ea737.txt",
+      "type" : "text/plain",
+      "size" : 0
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup::0",
+    "time" : {
+      "start" : 1553081340922,
+      "stop" : 1553081340922,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "execute_cases"
+  }, {
+    "name" : "subSuite",
+    "value" : "excute_cases"
+  }, {
+    "name" : "host",
+    "value" : "USER-NF5TMHEKHE"
+  }, {
+    "name" : "thread",
+    "value" : "17544-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "execute_cases"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "cdb106f49844ff01.json",
+  "parameterValues" : [ ]
+}
