@@ -8,6 +8,6 @@ pytest-html==1.20.0
 pytest-metadata==1.8.0
 pytest-xdist==1.26.1
 python-dateutil==2.7.5
-PyYAML==3.13
+PyYAML==5.4
 requests==2.18.1
 xlrd==1.0.0
